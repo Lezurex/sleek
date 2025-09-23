@@ -31,11 +31,11 @@ const RendererComponent: React.FC<RendererComponentProps> = memo(
         type: 'due',
         key: 'due:'
       },
-      { pattern: /@(\S+)/, type: 'contexts', key: '@' },
-      { pattern: /(?:^|\s)\+(\S+)/, type: 'projects', key: '+' },
+      { pattern: /\b@(\S+)/, type: 'contexts', key: '@' },
+      { pattern: /\b\+(\S+)/, type: 'projects', key: '+' },
       { pattern: /\bh:1\b/, type: 'hidden', key: 'h:1' },
-      { pattern: /pm:(\d+)/, type: 'pm', key: 'pm:' },
-      { pattern: /rec:([^ ]+)/, type: 'rec', key: 'rec:' }
+      { pattern: /\bpm:(\d+)/, type: 'pm', key: 'pm:' },
+      { pattern: /\brec:([^ ]+)/, type: 'rec', key: 'rec:' }
     ]
 
     const replacements: {
